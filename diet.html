@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>النظام الغذائي</title>
+<style>
+body{
+    
+    direction: rtl;
+    font-family: 'cairo', sans-serif;
+    background-image: url(assets/Screenshot_٢٠٢٥١٢٢٧_١٧٥٢٢٢[1].jpg); 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    color:#00ffffee;           
+    text-align:center;
+}
+.overlay{
+    background:rgba(0,0,0.65);
+    min-height: 100vh;
+    padding: 30px,10px;
+
+}
+
+
+
+table{
+    width:95%;
+    margin:20px auto;
+    border-collapse:collapse;
+    background: rgba(30, 30, 30, 0.75);
+    background filter: bluer(4px);
+    color: #fff;
+}
+
+th,td {
+    border:1px solid rgba(225, 215, 150, 0.6);
+    padding:10px;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+h1, h2, h3, h4{
+    text-align: center;
+    color: #f5d7a1;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Hello <span id="username"></span></h1>
+
+<div id="user1" style="display:none;">
+    <h2>  Weekly diet</h2>
+
+     <table>
+        <tr><th>الوجبات</th><th></th><th></th></tr>
+        <tr><td>الوجبة الأولي</td><td></td><td></td></tr>
+        <tr><td>الوجبة الثانية</td><td></td><td></td></tr>
+        <tr><td>الوجبة الثالثة</td><td></td><td></tr>
+        <tr><td>الوجبة الرابعة</td><td></td><td></td></tr>
+        <tr><td>الوجبة الخامسة</td><td></td><td></td></tr>
+        <tr><td>الوجبة السادسة</td><td></td><td></td></tr>
+        <tr><td>الوجبة السابعة</td><td></td><td></td></tr>
+    </table>
+
+    <h3>  Weekly exercise routine </h3>
+    <table>
+        <tr><th>التمارين</th><th></th><th></th></tr>
+        <tr><td>التمرينة الأولي</td><td></td><td></td>
+        <tr><td>التمرينة الثانية</td><td></td><td></td></tr>
+        <tr><td>التمرينة الثالثة</td><td></td><td></td></tr>
+        <tr><td>التمرينة الرابعة</td><td></td><td></td></tr>
+        <tr><td>التمرينة الخامسة</td><td></td><td></td></tr>
+        <tr><td>التمرينة السادسة</td><td></td><td></td></tr>
+        <tr><td>التمرينة السابعة</td><td></td><td></td></tr>
+    </table>
+    <h4>ملحوظة:</h4>
+</div>
+
+
+<div id="user2" style="display:none;">
+    <h2>  Weekly diet</h2>
+
+    
+    <table>
+        <tr><th>الوجبات</th><th></th><th></th></tr>
+        <tr><td>الوجبة الأولي</td><td></td><td></td></tr>
+        <tr><td>الوجبة الثانية</td><td></td><td></td></tr>
+        <tr><td>الوجبة الثالثة</td><td></td><td></td></tr>
+        <tr><td>الوجبة الرابعة</td><td></td><td></td></tr>
+        <tr><td>الوجبة الخامسة</td><td></td><td></td></tr>
+        <tr><td>الوجبة السادسة</td><td></td><td></td></tr>
+        <tr><td>الوجبة السابعة</td><td></td><td></td></tr>
+    </table>
+
+    <h3>  Weekly exercise routine</h3>
+    <table>
+        <tr><th>الأيام</th><th></th><th></th></tr>
+        <tr><td>اليوم الأول</td><td></td><td></td>
+        <tr><td>اليوم الثاني</td><td></td><td></td></tr>
+        <tr><td>اليوم الثالث</td><td></td><td></td></tr>
+        <tr><td>اليوم الرابع</td><td></td><td></td></tr>
+        <tr><td>اليوم الخامس</td><td></td><td></td></tr>
+        <tr><td>اليوم السادس</td><td></td><td></td></tr>
+        <tr><td>اليوم السابع</td><td></td><td></td></tr>
+    </table>
+    <h4>ملحوظة:</h4>
+</div>
+
+<script>
+const name = localStorage.getItem("username");
+document.getElementById("username").textContent = name;
+
+if (name === "محمد طارق") {
+    document.getElementById("user1").style.display = "block";
+    document.getElementById("user2").style.display = "none";
+}
+else if (name === "يوسف شهده") {
+    document.getElementById("user1").style.display = "none";
+    document.getElementById("user2").style.display = "block";
+}
+else {
+    document.body.innerHTML = "<h2> Access denied </h2>";
+}
+</script>
+
+</body>
+</html>
